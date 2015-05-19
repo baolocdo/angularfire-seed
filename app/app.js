@@ -8,7 +8,8 @@ var app = angular.module('myApp', [
     'myApp.home',
     'myApp.account',
     'myApp.chat',
-    'myApp.login'
+    'myApp.login',
+    'myApp.navigation'
   ])
 
   .run(['$rootScope', 'Auth', function($rootScope, Auth) {
