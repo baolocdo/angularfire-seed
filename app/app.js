@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+var app = angular.module('myApp', [
     'ngMaterial',
     'myApp.config',
     'myApp.security',
@@ -17,3 +17,9 @@ angular.module('myApp', [
       $rootScope.loggedIn = !!user;
     });
   }]);
+
+app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
+  $scope.toggleSidenav = function(menuId) {
+    $mdSidenav(menuId).toggle();
+  };
+}]);
