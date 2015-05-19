@@ -13,20 +13,7 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body ng-cloak layout="column" ng-controller="AppCtrl">
-  <md-toolbar layout="row">
-    <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
-      <span class="md-visually-hidden">Menu</span>
-    </md-button>
-    <h1 class="md-toolbar-tools" layout-align-gt-sm="center">Python Class</h1>
-    <div layout="row">
-      <md-button ng-hide="loggedIn">
-        <a href="#/login">login</a>
-      </md-button>
-      <md-button ng-show="loggedIn">
-        <a href="#/account">account</a>
-      </md-button>
-    </div>
-  </md-toolbar>
+  <header-toolbar></header-toolbar>
   <div layout="row" flex>
     <navigation-bar></navigation-bar>
     <md-content class="view-container" ng-view layout-fill></md-content>
@@ -57,6 +44,7 @@
   <script src="components/security/security.js"></script>
 
   <script src="navigation/navigation.js"></script>
+  <script src="header/header.js"></script>
   <script src="home/home.js"></script>
   <script src="account/account.js"></script>
   <script src="chat/chat.js"></script>

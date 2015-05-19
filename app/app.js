@@ -9,7 +9,8 @@ var app = angular.module('myApp', [
     'myApp.account',
     'myApp.chat',
     'myApp.login',
-    'myApp.navigation'
+    'myApp.navigation',
+    'myApp.header'
   ])
 
   .run(['$rootScope', 'Auth', function($rootScope, Auth) {
@@ -19,8 +20,6 @@ var app = angular.module('myApp', [
     });
   }]);
 
-app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
-  $scope.toggleSidenav = function(menuId) {
-    $mdSidenav(menuId).toggle();
-  };
+app.controller('AppCtrl', ['$scope', function($scope) {
+ 
 }]);

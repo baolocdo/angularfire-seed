@@ -1,0 +1,14 @@
+<md-toolbar layout="row">
+  <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button menuBtn">
+    <span class="md-visually-hidden">Menu</span>
+  </md-button>
+  <h1 class="md-toolbar-tools" layout-align-gt-sm="center">Python Class</h1>
+  <div layout="row">
+    <md-button ng-hide="loggedIn">
+      <a href="#/login">login</a>
+    </md-button>
+    <md-button ng-show="loggedIn">
+      <a href="#/account">account</a>
+    </md-button>
+  </div>
+</md-toolbar>
