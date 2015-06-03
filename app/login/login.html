@@ -2,20 +2,27 @@
 <h2>Login Page</h2>
 
 <form>
-    <label>
-        <span>email</span>
-        <input type="text" ng-model="email" />
-    </label>
-    <label>
-        <span>password</span>
-        <input type="password" ng-model="pass" />
-    </label>
+    <md-input-container>
+      <label>Email</label>
+      <input ng-model="email">
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input ng-model="pass" type="password">
+    </md-input-container>
     <label ng-cloak ng-show="createMode">
         <span>confirm pass</span>
         <input type="password" ng-model="confirm" />
     </label>
-    <md-button ng-click="login(email, pass)" ng-hide="createMode">Log In</md-button>
-    <md-button ng-click="createMode = true" ng-hide="createMode">Register</md-button>
+    <md-button ng-click="login(email, pass)" 
+               ng-hide="createMode"
+               class="md-raised md-primary">
+        Log In
+    </md-button>
+    <md-button ng-click="createMode = true"
+               ng-hide="createMode">
+        Register
+    </md-button>
     <md-button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</md-button>
     <md-button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</md-button>
 
