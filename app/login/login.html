@@ -1,31 +1,42 @@
+<md-content class="login-page" layout="column" layout-align="start center">
+    <h2>Hi, welcome to Python class</h2>
 
-<h2>Login Page</h2>
+    <div class="card-container" layout="row" layout-fill
+         layout-align="center start">
+        <md-card layout-padding
+                 layout-margin layout="column"
+                 layout-align="center center"
+                 class="login-card"
+                 flex="70">
+            <h3>Please login to see contents</h3>
 
-<form>
-    <md-input-container>
-      <label>Email</label>
-      <input ng-model="email">
-    </md-input-container>
-    <md-input-container>
-      <label>Password</label>
-      <input ng-model="pass" type="password">
-    </md-input-container>
-    <label ng-cloak ng-show="createMode">
-        <span>confirm pass</span>
-        <input type="password" ng-model="confirm" />
-    </label>
-    <md-button ng-click="login(email, pass)" 
-               ng-hide="createMode"
-               class="md-raised md-primary">
-        Log In
-    </md-button>
-    <md-button ng-click="createMode = true"
-               ng-hide="createMode">
-        Register
-    </md-button>
-    <md-button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</md-button>
-    <md-button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</md-button>
+            <form layout-fill>
+                <md-input-container>
+                  <label>Email</label>
+                  <input ng-model="email">
+                </md-input-container>
+                <md-input-container>
+                  <label>Password</label>
+                  <input ng-model="pass" type="password">
+                </md-input-container>
+                <label ng-cloak ng-show="createMode">
+                    <span>confirm pass</span>
+                    <input type="password" ng-model="confirm" />
+                </label>
+                <md-button ng-click="login(email, pass)" 
+                           ng-hide="createMode"
+                           class="md-raised md-primary">
+                    Log In
+                </md-button>
+                <md-button ng-click="createMode = true"
+                           ng-hide="createMode">
+                    Register
+                </md-button>
+                <md-button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</md-button>
+                <md-button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</md-button>
 
-    <p ng-show="err" class="error">{{err}}</p>
-</form>
-
+                <p ng-show="err" class="error">{{err}}</p>
+            </form>
+        </md-card>
+    </div>
+</md-content>

@@ -1,4 +1,7 @@
 /* app css stylesheet */
+.login-page .login-card {
+  padding: 24px;
+}
 
 .menu {
   border-bottom: 0.1em solid black;
